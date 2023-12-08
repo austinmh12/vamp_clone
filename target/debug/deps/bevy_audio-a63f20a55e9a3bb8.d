@@ -1,0 +1,10 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_audio-a63f20a55e9a3bb8.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_output.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_source.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\pitch.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\sinks.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_audio-a63f20a55e9a3bb8.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_output.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_source.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\pitch.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\sinks.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_output.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\audio_source.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\pitch.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_audio-0.12.0\src\sinks.rs:

@@ -1,0 +1,10 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\thread_local-1ab998526fc53a31.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\cached.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\thread_id.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\unreachable.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\libthread_local-1ab998526fc53a31.rlib: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\cached.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\thread_id.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\unreachable.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\thread_local-1ab998526fc53a31.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\cached.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\thread_id.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\unreachable.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\cached.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\thread_id.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\thread_local-1.1.7\src\unreachable.rs:

@@ -1,0 +1,10 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_winit-1eef2e6f249a37c8.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\accessibility.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\converters.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\system.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_config.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_windows.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_winit-1eef2e6f249a37c8.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\accessibility.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\converters.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\system.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_config.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_windows.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\accessibility.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\converters.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\system.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_config.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_winit-0.12.0\src\winit_windows.rs:

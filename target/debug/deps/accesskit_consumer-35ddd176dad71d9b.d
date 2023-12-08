@@ -1,0 +1,10 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\accesskit_consumer-35ddd176dad71d9b.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\tree.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\node.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\filters.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\iterators.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\text.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\accesskit_consumer-35ddd176dad71d9b.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\tree.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\node.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\filters.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\iterators.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\text.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\tree.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\node.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\filters.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\iterators.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.16.1\src\text.rs:

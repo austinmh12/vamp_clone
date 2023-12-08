@@ -1,0 +1,12 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bitflags-7c62690e369d7862.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\iter.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\parser.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\traits.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\public.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\internal.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external\serde.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bitflags-7c62690e369d7862.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\iter.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\parser.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\traits.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\public.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\internal.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external\serde.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\iter.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\parser.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\traits.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\public.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\internal.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.4.1\src\external\serde.rs:

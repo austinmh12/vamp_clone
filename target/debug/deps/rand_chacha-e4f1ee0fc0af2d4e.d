@@ -1,0 +1,7 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\rand_chacha-e4f1ee0fc0af2d4e.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\chacha.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\guts.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\rand_chacha-e4f1ee0fc0af2d4e.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\chacha.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\guts.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\chacha.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rand_chacha-0.3.1\src\guts.rs:

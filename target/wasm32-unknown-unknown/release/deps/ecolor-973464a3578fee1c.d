@@ -1,0 +1,11 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\ecolor-973464a3578fee1c.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\color32.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva_gamma.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\rgba.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\libecolor-973464a3578fee1c.rlib: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\color32.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva_gamma.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\rgba.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\wasm32-unknown-unknown\release\deps\ecolor-973464a3578fee1c.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\color32.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva_gamma.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\rgba.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\color32.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva_gamma.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\hsva.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.23.0\src\rgba.rs:

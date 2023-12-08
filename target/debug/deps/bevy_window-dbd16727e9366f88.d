@@ -1,0 +1,10 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_window-dbd16727e9366f88.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\cursor.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\event.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\raw_handle.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\system.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\window.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\bevy_window-dbd16727e9366f88.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\cursor.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\event.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\raw_handle.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\system.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\window.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\cursor.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\event.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\raw_handle.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\system.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bevy_window-0.12.0\src\window.rs:

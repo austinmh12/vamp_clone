@@ -1,0 +1,11 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\async_task-b62536d225f3dcd1.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\header.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\raw.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\runnable.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\state.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\task.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\utils.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\async_task-b62536d225f3dcd1.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\header.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\raw.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\runnable.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\state.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\task.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\utils.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\header.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\raw.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\runnable.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\state.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\task.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\async-task-4.5.0\src\utils.rs:

@@ -1,0 +1,12 @@
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\ahash-7fe7ee3072c57931.rmeta: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src/lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\convert.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\fallback_hash.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\operations.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\random_state.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\specialize.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_map.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_set.rs
+
+C:\Users\austi\Documents\Rust\vamp_clone\target\debug\deps\ahash-7fe7ee3072c57931.d: C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src/lib.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\convert.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\fallback_hash.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\operations.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\random_state.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\specialize.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_map.rs C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_set.rs
+
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src/lib.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\convert.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\fallback_hash.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\operations.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\random_state.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\specialize.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_map.rs:
+C:\Users\austi\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ahash-0.8.6\src\hash_set.rs:
