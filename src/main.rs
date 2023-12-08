@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
 mod game;
 mod player;
@@ -12,6 +13,7 @@ use game::GamePlugin;
 use enemy::EnemyPlugin;
 use player::PlayerPlugin;
 use score::ScorePlugin;
+use spells::SpellsPlugin;
 
 pub const GRID_SIZE: f32 = 31.;
 
@@ -23,6 +25,8 @@ fn main() {
 			EnemyPlugin,
 			PlayerPlugin,
 			ScorePlugin,
+			SpellsPlugin,
+			WorldInspectorPlugin::default(),
 		))
 		.run();
 }
