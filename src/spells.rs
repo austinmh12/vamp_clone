@@ -1,11 +1,15 @@
-use bevy::prelude::*;
-use bevy::window::PrimaryWindow;
-use crate::player::components::Player;
-use crate::enemy::components::Enemy;
-use crate::score::resources::Score;
-use super::components::Spell;
-use crate::GRID_SIZE;
-use super::resources::SpellSpawnTimer;
+use crate::prelude::*;
+
+pub struct SpellsPlugin;
+
+impl Plugin for SpellsPlugin {
+	fn build(&self, app: &mut App) {
+		app
+			.init_resource::<SpellSpawnTimer>()
+			.add_systems(Update, (spawn_spells_over_time, spell_hit_enemy, tick_spell_spawn_timer))
+			.add_systems(FixedUpdate, spell_movement);
+	}
+}
 
 pub fn spawn_spell(
 	mut commands: Commands,
@@ -41,8 +45,10 @@ pub fn spawn_spell(
 				..Default::default()
 			},
 			Spell {
-				direction,
+				timer: Timer::from_seconds(1., TimerMode::Repeating),
+				damage: 2.,
 				speed: 100.,
+				direction,
 			},
 		)
 	);
@@ -125,8 +131,10 @@ pub fn spawn_spells_over_time(
 					..Default::default()
 				},
 				Spell {
-					direction,
+					timer: Timer::from_seconds(1., TimerMode::Repeating),
+					damage: 2.,
 					speed: 100.,
+					direction,
 				},
 			)
 		);

@@ -1,8 +1,15 @@
-use bevy::prelude::*;
-use bevy::window::PrimaryWindow;
-use crate::GRID_SIZE;
-use super::PLAYER_SPEED;
-use super::components::Player;
+use crate::prelude::*;
+
+pub struct PlayerPlugin;
+
+impl Plugin for PlayerPlugin {
+	fn build(&self, app: &mut App) {
+		app
+			.add_systems(Startup, spawn_player)
+			.add_systems(FixedUpdate, player_movement)
+			.add_systems(Update, (confine_player_movement, player_game_over));
+	}
+}
 
 pub fn spawn_player(
 	mut commands: Commands,
@@ -25,17 +32,26 @@ pub fn spawn_player(
 				transform: Transform::from_xyz(primary.width() / 2., primary.height() / 2., 0.),
 				..default()
 			},
-			Player {},
+			Player {
+				exp: 0,
+				next_lvl_exp: 5,
+				level: 1,
+				speed: 500.,
+				hp: 100.,
+				max_hp: 100.,
+			},
+			Name::new("Player"),
+			Collider::ball(GRID_SIZE),
 		)
 	);
 }
 
 pub fn player_movement(
 	keyboard_input: Res<Input<KeyCode>>,
-	mut player_query: Query<&mut Transform, With<Player>>,
+	mut player_query: Query<(&mut Transform, &mut Player), With<Player>>,
 	time: Res<Time>,
 ) {
-	let Ok(mut transform) = player_query.get_single_mut() else {
+	let Ok((mut transform, player)) = player_query.get_single_mut() else {
 		return;
 	};
 	let mut direction = Vec3::ZERO;
@@ -58,9 +74,10 @@ pub fn player_movement(
 		direction = direction.normalize();
 	}
 
-	transform.translation += direction * PLAYER_SPEED * time.delta_seconds();
+	transform.translation += direction * player.speed * time.delta_seconds();
 }
 
+// TODO: Remove this as the camera should follow the player
 pub fn confine_player_movement(
 	mut player_query: Query<&mut Transform, With<Player>>,
 	window_query: Query<&Window, With<PrimaryWindow>>,
@@ -90,5 +107,17 @@ pub fn confine_player_movement(
 		transform.translation.y = y_min;
 	} else if transform.translation.y > y_max {
 		transform.translation.y = y_max;
+	}
+}
+
+pub fn player_game_over(
+	player_query: Query<&Player>,
+	mut game_state: ResMut<NextState<GameState>>,
+) {
+	let Ok(player) = player_query.get_single() else {
+		return;
+	};
+	if player.hp <= 0. {
+		game_state.set(GameState::GameOver);
 	}
 }
