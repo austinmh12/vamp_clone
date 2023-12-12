@@ -142,11 +142,34 @@ pub fn spawn_enemies_over_time (
 
 pub fn enemy_death_check(
 	mut commands: Commands,
-	mut enemies: Query<(Entity, &Transform, &Enemy)>,
+	enemies: Query<(Entity, &Transform, &Enemy)>,
+	asset_server: Res<AssetServer>,
+	mut texture_atlases: ResMut<Assets<TextureAtlas>>,
 ) {
+	let texture_handle = asset_server.load("sprites/spritesheet.png");
+    let texture_atlas = TextureAtlas::from_grid(texture_handle, Vec2::new(GRID_SIZE, GRID_SIZE), 20, 20, None, None);
+    let texture_atlas_handle = texture_atlases.add(texture_atlas);
+
 	for (entity, transform, enemy) in &enemies {
 		if enemy.hp <= 0. {
 			commands.entity(entity).despawn_recursive();
+			commands.spawn(
+				(
+					SpriteSheetBundle {
+						texture_atlas: texture_atlas_handle.clone(),
+						sprite: TextureAtlasSprite::new(3),
+						transform: Transform::from_xyz(transform.translation.x, transform.translation.y, 0.),
+						..Default::default()
+					},
+					Exp {
+						value: 1,
+						speed: 50.,
+						collecting: false,
+					},
+					Sensor,
+					Collider::ball(GRID_SIZE / 2.),
+				)
+			);
 		}
 	}
 }
