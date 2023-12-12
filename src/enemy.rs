@@ -8,7 +8,12 @@ impl Plugin for EnemyPlugin {
 			.init_resource::<EnemySpawnTimer>()
 			.add_systems(Startup, spawn_enemies)
 			.add_systems(FixedUpdate, enemy_movement)
-			.add_systems(Update, (enemy_damage_player, tick_enemy_spawn_timer, spawn_enemies_over_time));
+			.add_systems(Update, (
+				enemy_damage_player,
+				tick_enemy_spawn_timer,
+				spawn_enemies_over_time,
+				enemy_death_check,
+			));
 	}
 }
 
@@ -132,5 +137,16 @@ pub fn spawn_enemies_over_time (
 				},
 			)
 		);
+	}
+}
+
+pub fn enemy_death_check(
+	mut commands: Commands,
+	mut enemies: Query<(Entity, &Transform, &Enemy)>,
+) {
+	for (entity, transform, enemy) in &enemies {
+		if enemy.hp <= 0. {
+			commands.entity(entity).despawn_recursive();
+		}
 	}
 }

@@ -6,12 +6,12 @@ impl Plugin for SpellsPlugin {
 	fn build(&self, app: &mut App) {
 		app
 			.init_resource::<SpellSpawnTimer>()
-			.add_systems(Update, (spawn_spells_over_time, spell_hit_enemy, tick_spell_spawn_timer))
+			.add_systems(Update, (spawn_spells_over_time, spell_damage_enemy, tick_spell_spawn_timer))
 			.add_systems(FixedUpdate, spell_movement);
 	}
 }
 
-pub fn spawn_spell(
+pub fn _spawn_spell(
 	mut commands: Commands,
 	asset_server: Res<AssetServer>,
 	mut texture_atlases: ResMut<Assets<TextureAtlas>>,
@@ -64,20 +64,25 @@ pub fn spell_movement(
 	}
 }
 
-pub fn spell_hit_enemy(
-	mut commands: Commands,
-	enemy_query: Query<(Entity, &Transform), With<Enemy>>,
-	spell_query: Query<(Entity, &Transform), With<Spell>>,
+pub fn spell_damage_enemy(
+	spell_query: Query<(&Collider, &GlobalTransform, &Spell)>,
+	mut enemy_query: Query<&mut Enemy>,
+	rapier_context: Res<RapierContext>,
+	time: Res<Time>,
 ) {
-	for (spell_entity, spell_transform) in spell_query.iter() {
-		for (enemy_entity, enemy_transform) in enemy_query.iter() {
-			let distance = spell_transform.translation.distance(enemy_transform.translation);
-			if distance < GRID_SIZE {
-				println!("Spell hit an enemy");
-				commands.entity(spell_entity).despawn();
-				commands.entity(enemy_entity).despawn();
+	for (spell_collider, spell_transform, spell) in &spell_query {
+		rapier_context.intersections_with_shape(
+			spell_transform.translation().truncate(),
+			0.,
+			spell_collider,
+			QueryFilter::new(),
+			|e| {
+				if let Ok(mut enemy) = enemy_query.get_mut(e) {
+					enemy.hp -= spell.damage * time.delta_seconds();
+				}
+				true
 			}
-		}
+		);
 	}
 }
 
@@ -131,11 +136,13 @@ pub fn spawn_spells_over_time(
 					..Default::default()
 				},
 				Spell {
-					timer: Timer::from_seconds(1., TimerMode::Repeating),
-					damage: 2.,
-					speed: 100.,
+					timer: Timer::from_seconds(0.3, TimerMode::Repeating),
+					damage: 20.,
+					speed: 250.,
 					direction,
 				},
+				Sensor,
+				Collider::ball(GRID_SIZE),
 			)
 		);
 	}
