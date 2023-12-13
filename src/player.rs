@@ -7,7 +7,7 @@ impl Plugin for PlayerPlugin {
 		app
 			.add_systems(Startup, spawn_player)
 			.add_systems(FixedUpdate, player_movement)
-			.add_systems(Update, (confine_player_movement, player_game_over));
+			.add_systems(Update, (confine_player_movement, player_game_over, player_near_exp, player_gain_exp));
 	}
 }
 
@@ -42,6 +42,7 @@ pub fn spawn_player(
 			},
 			Name::new("Player"),
 			Collider::ball(GRID_SIZE),
+			GamePlayEntity,
 		)
 	);
 }
@@ -119,5 +120,43 @@ pub fn player_game_over(
 	};
 	if player.hp <= 0. {
 		game_state.set(GameState::GameOver);
+	}
+}
+
+pub fn player_near_exp(
+	player_query: Query<(&Transform, &Collider), With<Player>>,
+	rapier_context: Res<RapierContext>,
+	mut exp: Query<&mut Exp>,
+) {
+	let Ok((transform, collider)) = player_query.get_single() else {
+		return;
+	};
+	rapier_context.intersections_with_shape(
+		transform.translation.truncate(), 
+		0., 
+		collider,
+		QueryFilter::new(),
+		|e| {
+			if let Ok(mut xp) = exp.get_mut(e) {
+				xp.collecting = true;
+			}
+			true
+		}
+	);
+}
+
+pub fn player_gain_exp(
+	mut commands: Commands,
+	exp: Query<(Entity, &Transform, &Exp)>,
+	mut player_query: Query<(&Transform, &mut Player), Without<Exp>>,
+) {
+	let Ok((player_transform, mut player)) = player_query.get_single_mut() else {
+		return;
+	};
+	for (entity, transform, xp) in &exp {
+		if Vec2::distance(transform.translation.truncate(), player_transform.translation.truncate()) < GRID_SIZE * 1.5 {
+			player.exp += xp.value;
+			commands.entity(entity).despawn_recursive();
+		}
 	}
 }

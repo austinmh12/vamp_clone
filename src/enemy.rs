@@ -51,6 +51,7 @@ pub fn spawn_enemies(
 				RigidBody::Dynamic,
 				Collider::cuboid(GRID_SIZE / 2., GRID_SIZE / 2.),
 				LockedAxes::ROTATION_LOCKED_Z,
+				GamePlayEntity,
 			)
 		);
 	}
@@ -133,8 +134,12 @@ pub fn spawn_enemies_over_time (
 					speed: 200.,
 					hp: 10.,
 					asset: 1usize,
-					dmg: 1.,
+					dmg: 10.,
 				},
+				RigidBody::Dynamic,
+				Collider::cuboid(GRID_SIZE / 2., GRID_SIZE / 2.),
+				LockedAxes::ROTATION_LOCKED_Z,
+				GamePlayEntity,
 			)
 		);
 	}
@@ -168,6 +173,7 @@ pub fn enemy_death_check(
 					},
 					Sensor,
 					Collider::ball(GRID_SIZE / 2.),
+					GamePlayEntity,
 				)
 			);
 		}

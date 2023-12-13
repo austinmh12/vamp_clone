@@ -25,5 +25,12 @@ fn main() {
 			gravity: Vec2::ZERO,
 			..default()
 		})
+		.add_systems(OnEnter(GameState::GameOver), despawn_game_play)
 		.run();
+}
+
+fn despawn_game_play(mut commands: Commands, entities: Query<Entity, With<GamePlayEntity>>) {
+    for entity in &entities {
+        commands.entity(entity).despawn_recursive();
+    }
 }

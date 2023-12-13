@@ -143,6 +143,7 @@ pub fn spawn_spells_over_time(
 				},
 				Sensor,
 				Collider::ball(GRID_SIZE),
+				GamePlayEntity,
 			)
 		);
 	}
