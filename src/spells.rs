@@ -96,7 +96,8 @@ pub fn tick_spell_spawn_timer(
 pub fn spawn_spells_over_time(
 	mut commands: Commands,
 	player_query: Query<&Transform, With<Player>>,
-	enemy_query: Query<&Transform, With<Enemy>>,
+	// enemy_query: Query<&Transform, With<Enemy>>,
+	mouse_pos: Res<MousePosition>,
 	asset_server: Res<AssetServer>,
 	mut texture_atlases: ResMut<Assets<TextureAtlas>>,
 	spell_spawn_time: Res<SpellSpawnTimer>,
@@ -110,23 +111,24 @@ pub fn spawn_spells_over_time(
 		let texture_atlas = TextureAtlas::from_grid(texture_handle, Vec2::new(GRID_SIZE, GRID_SIZE), 20, 20, None, None);
 		let texture_atlas_handle = texture_atlases.add(texture_atlas);
 		// let mut direction = Vec3::ZERO;
-		let mut prev_distance = 99999.;
-		let mut closest_enemy = None;
-		for enemy in enemy_query.iter() {
-			let distance = player_transform.translation.distance(enemy.translation);
-			if distance < prev_distance {
-				prev_distance = distance;
-				closest_enemy = Some(enemy);
-			}
-		}
-		if closest_enemy.is_none() {
-			return;
-		}
-		let closest_enemy = closest_enemy.unwrap();
-		let direction = Vec2::new(closest_enemy.translation.x - player_transform.translation.x, closest_enemy.translation.y - player_transform.translation.y).normalize();
+		// let mut prev_distance = 99999.;
+		// let mut closest_enemy = None;
+		// for enemy in enemy_query.iter() {
+		// 	let distance = player_transform.translation.distance(enemy.translation);
+		// 	if distance < prev_distance {
+		// 		prev_distance = distance;
+		// 		closest_enemy = Some(enemy);
+		// 	}
+		// }
+		// if closest_enemy.is_none() {
+		// 	return;
+		// }
+		// let closest_enemy = closest_enemy.unwrap();
+		// let direction = Vec2::new(closest_enemy.translation.x - player_transform.translation.x, closest_enemy.translation.y - player_transform.translation.y).normalize();
+		let direction = Vec2::new(mouse_pos.pos.x - player_transform.translation.x, mouse_pos.pos.y - player_transform.translation.y);
 		let rotation = Quat::from_axis_angle(Vec3::new(0., 0., 1.), direction.y.atan2(direction.x) - f32::to_radians(90.));
 		let mut transform = Transform::from_xyz(player_transform.translation.x, player_transform.translation.y, 0.);
-			transform.rotation = rotation;
+		transform.rotation = rotation;
 		commands.spawn(
 			(
 				SpriteSheetBundle {

@@ -25,6 +25,7 @@ fn main() {
 			gravity: Vec2::ZERO,
 			..default()
 		})
+		.insert_resource(MousePosition::default())
 		.add_systems(OnEnter(GameState::GameOver), despawn_game_play)
 		.run();
 }

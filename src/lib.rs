@@ -82,6 +82,14 @@ pub mod prelude {
 		pub direction: Vec2,
 	}
 
+	#[derive(Resource, Default)]
+	pub struct MousePosition {
+		pub pos: Vec2,
+	}
+
+	#[derive(Component)]
+	pub struct MainCamera;
+
 	// Here until I figure out waves
 	#[derive(Resource)]
 	pub struct EnemySpawnTimer {
