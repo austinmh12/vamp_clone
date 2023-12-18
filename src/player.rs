@@ -7,7 +7,7 @@ impl Plugin for PlayerPlugin {
 		app
 			.add_systems(Startup, spawn_player)
 			.add_systems(FixedUpdate, player_movement)
-			.add_systems(Update, (confine_player_movement, player_game_over, player_near_exp, player_gain_exp, player_level_up));
+			.add_systems(Update, (player_game_over, player_near_exp, player_gain_exp, player_level_up));
 	}
 }
 
@@ -79,37 +79,37 @@ pub fn player_movement(
 }
 
 // TODO: Remove this as the camera should follow the player
-pub fn confine_player_movement(
-	mut player_query: Query<&mut Transform, With<Player>>,
-	window_query: Query<&Window, With<PrimaryWindow>>,
-) {
-	let Ok(primary) = window_query.get_single() else {
-		return;
-	};
-	let Ok(mut transform) = player_query.get_single_mut() else {
-		return;
-	};
-	let half_player_width = GRID_SIZE / 2.;
-	let half_player_height = GRID_SIZE / 2.;
-	let x_min = 0. + half_player_width;
-	let x_max = primary.width() - half_player_width;
-	let y_min = 0. + half_player_height;
-	let y_max = primary.height() - half_player_height;
+// pub fn confine_player_movement(
+// 	mut player_query: Query<&mut Transform, With<Player>>,
+// 	window_query: Query<&Window, With<PrimaryWindow>>,
+// ) {
+// 	let Ok(primary) = window_query.get_single() else {
+// 		return;
+// 	};
+// 	let Ok(mut transform) = player_query.get_single_mut() else {
+// 		return;
+// 	};
+// 	let half_player_width = GRID_SIZE / 2.;
+// 	let half_player_height = GRID_SIZE / 2.;
+// 	let x_min = 0. + half_player_width;
+// 	let x_max = primary.width() - half_player_width;
+// 	let y_min = 0. + half_player_height;
+// 	let y_max = primary.height() - half_player_height;
 
-	// Confine X
-	if transform.translation.x < x_min {
-		transform.translation.x = x_min;
-	} else if transform.translation.x > x_max {
-		transform.translation.x = x_max;
-	}
+// 	// Confine X
+// 	if transform.translation.x < x_min {
+// 		transform.translation.x = x_min;
+// 	} else if transform.translation.x > x_max {
+// 		transform.translation.x = x_max;
+// 	}
 
-	// Confine Y
-	if transform.translation.y < y_min {
-		transform.translation.y = y_min;
-	} else if transform.translation.y > y_max {
-		transform.translation.y = y_max;
-	}
-}
+// 	// Confine Y
+// 	if transform.translation.y < y_min {
+// 		transform.translation.y = y_min;
+// 	} else if transform.translation.y > y_max {
+// 		transform.translation.y = y_max;
+// 	}
+// }
 
 pub fn player_game_over(
 	player_query: Query<&Player>,
