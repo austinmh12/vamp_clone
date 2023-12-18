@@ -10,7 +10,8 @@ impl Plugin for GamePlugin {
 			.add_event::<GameOver>()
 			.add_event::<LevelUp>()
 			.add_systems(Startup, spawn_camera)
-			.add_systems(Update, (handle_game_over, exit_game, mouse_position_update));
+			.add_systems(Update, (handle_game_over, exit_game, mouse_position_update))
+			.add_systems(FixedUpdate, camera_follow_player);
 	}
 }
 
@@ -45,6 +46,21 @@ pub fn spawn_camera(
 			MainCamera,
 		)
 	);
+}
+
+pub fn camera_follow_player(
+	mut camera_query: Query<&mut Transform, With<MainCamera>>,
+	player_query: Query<&GlobalTransform, With<Player>>,
+) {
+	let Ok(mut camera_transform) = camera_query.get_single_mut() else {
+		return;
+	};
+	let Ok(player_transform) = player_query.get_single() else {
+		return;
+	};
+	let player_translation = player_transform.translation().truncate();
+	camera_transform.translation.x = player_translation.x;
+	camera_transform.translation.y = player_translation.y;
 }
 
 pub fn mouse_position_update(
