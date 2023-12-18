@@ -8,6 +8,8 @@ mod events;
 
 pub mod prelude {
 	pub const GRID_SIZE: f32 = 31.;
+	pub const PLAYER_BASE_EXP: f64 = 5.;
+	pub const PLAYER_EXP_SCALING: f64 = 1.02;
 
 	pub use crate::enemy::EnemyPlugin;
 	pub use crate::exp::ExpPlugin;

@@ -175,11 +175,11 @@ pub fn player_level_up(
 	for event in player_level_up_reader.read() {
 		player.level = event.level + 1;
 		player.exp = 0;
-		let top1 = 1.02f64.powi(player.level as i32);
-		let top2 = 1.02f64.powi(player.level as i32 + 1) - 1.;
-		let bottom = 1.02 - 1.;
+		let top1 = PLAYER_EXP_SCALING.powi(player.level as i32);
+		let top2 = PLAYER_EXP_SCALING.powi(player.level as i32 + 1) - 1.;
+		let bottom = PLAYER_EXP_SCALING - 1.;
 		
-		let new_exp = 10. * ((top1 * top2) / bottom);
+		let new_exp = PLAYER_BASE_EXP * ((top1 * top2) / bottom);
 		player.next_lvl_exp = new_exp as i64;
 	}
 }
