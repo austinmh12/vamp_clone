@@ -26,9 +26,9 @@ pub mod prelude {
 
 	#[derive(Debug, Clone, States, PartialEq, Eq, Default, Hash)]
 	pub enum GameState {
-		#[default]
 		MainMenu,
 		// StartingLoop,
+		#[default]
 		Gameplay,
 		LevelUp,
 		GameOver,

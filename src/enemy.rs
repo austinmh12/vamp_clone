@@ -1,4 +1,5 @@
 use crate::prelude::*;
+use crate::game::in_gameplay;
 
 pub struct EnemyPlugin;
 
@@ -13,7 +14,7 @@ impl Plugin for EnemyPlugin {
 				tick_enemy_spawn_timer,
 				spawn_enemies_over_time,
 				enemy_death_check,
-			));
+			).run_if(in_gameplay));
 	}
 }
 

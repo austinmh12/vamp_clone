@@ -81,3 +81,7 @@ pub fn mouse_position_update(
 		mouse_position.pos = world_position;
 	}
 }
+
+pub fn in_gameplay(state: Res<State<GameState>>) -> bool {
+	return state.get() == &GameState::Gameplay
+}

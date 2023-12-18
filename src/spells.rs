@@ -1,4 +1,5 @@
 use crate::prelude::*;
+use crate::game::in_gameplay;
 
 pub struct SpellsPlugin;
 
@@ -6,7 +7,11 @@ impl Plugin for SpellsPlugin {
 	fn build(&self, app: &mut App) {
 		app
 			.init_resource::<SpellSpawnTimer>()
-			.add_systems(Update, (spawn_spells_over_time, spell_damage_enemy, tick_spell_spawn_timer))
+			.add_systems(Update, (
+				spawn_spells_over_time,
+				spell_damage_enemy,
+				tick_spell_spawn_timer
+			).run_if(in_gameplay))
 			.add_systems(FixedUpdate, spell_movement);
 	}
 }
