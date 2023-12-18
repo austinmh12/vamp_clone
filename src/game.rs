@@ -1,6 +1,6 @@
 use crate::prelude::*;
 use bevy::app::AppExit;
-use crate::events::GameOver;
+use crate::events::*;
 
 pub struct GamePlugin;
 
@@ -8,6 +8,7 @@ impl Plugin for GamePlugin {
 	fn build(&self, app: &mut App) {
 		app
 			.add_event::<GameOver>()
+			.add_event::<LevelUp>()
 			.add_systems(Startup, spawn_camera)
 			.add_systems(Update, (handle_game_over, exit_game, mouse_position_update));
 	}

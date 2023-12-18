@@ -1,4 +1,4 @@
-use crate::prelude::*;
+use crate::{prelude::*, events::LevelUp};
 
 pub struct PlayerPlugin;
 
@@ -7,7 +7,7 @@ impl Plugin for PlayerPlugin {
 		app
 			.add_systems(Startup, spawn_player)
 			.add_systems(FixedUpdate, player_movement)
-			.add_systems(Update, (confine_player_movement, player_game_over, player_near_exp, player_gain_exp));
+			.add_systems(Update, (confine_player_movement, player_game_over, player_near_exp, player_gain_exp, player_level_up));
 	}
 }
 
@@ -41,7 +41,7 @@ pub fn spawn_player(
 				max_hp: 100.,
 			},
 			Name::new("Player"),
-			Collider::ball(GRID_SIZE),
+			Collider::ball(GRID_SIZE / 2.),
 			GamePlayEntity,
 		)
 	);
@@ -149,6 +149,7 @@ pub fn player_gain_exp(
 	mut commands: Commands,
 	exp: Query<(Entity, &Transform, &Exp)>,
 	mut player_query: Query<(&Transform, &mut Player), Without<Exp>>,
+	mut player_level_up_writer: EventWriter<LevelUp>,
 ) {
 	let Ok((player_transform, mut player)) = player_query.get_single_mut() else {
 		return;
@@ -157,6 +158,28 @@ pub fn player_gain_exp(
 		if Vec2::distance(transform.translation.truncate(), player_transform.translation.truncate()) < GRID_SIZE * 1.5 {
 			player.exp += xp.value;
 			commands.entity(entity).despawn_recursive();
+			if player.exp >= player.next_lvl_exp {
+				player_level_up_writer.send(LevelUp { level: player.level });
+			}
 		}
+	}
+}
+
+pub fn player_level_up(
+	mut player_query: Query<&mut Player>,
+	mut player_level_up_reader: EventReader<LevelUp>,
+) {
+	let Ok(mut player) = player_query.get_single_mut() else {
+		return;
+	};
+	for event in player_level_up_reader.read() {
+		player.level = event.level + 1;
+		player.exp = 0;
+		let top1 = 1.02f64.powi(player.level as i32);
+		let top2 = 1.02f64.powi(player.level as i32 + 1) - 1.;
+		let bottom = 1.02 - 1.;
+		
+		let new_exp = 10. * ((top1 * top2) / bottom);
+		player.next_lvl_exp = new_exp as i64;
 	}
 }
