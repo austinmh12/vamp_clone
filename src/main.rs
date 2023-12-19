@@ -16,6 +16,7 @@ fn main() {
 			PlayerPlugin,
 			ScorePlugin,
 			SpellsPlugin,
+			UiPlugin,
 			WorldInspectorPlugin::default(),
 			RngPlugin::default(),
 			RapierPhysicsPlugin::<NoUserData>::pixels_per_meter(50.),

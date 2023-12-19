@@ -5,6 +5,7 @@ mod player;
 mod score;
 mod spells;
 mod events;
+mod ui;
 
 pub mod prelude {
 	pub const GRID_SIZE: f32 = 31.;
@@ -17,6 +18,7 @@ pub mod prelude {
 	pub use crate::player::PlayerPlugin;
 	pub use crate::score::ScorePlugin;
 	pub use crate::spells::SpellsPlugin;
+	pub use crate::ui::UiPlugin;
 
 	pub use bevy::prelude::*;
 	pub use bevy::window::PrimaryWindow;
@@ -118,4 +120,13 @@ pub mod prelude {
 			}
 		}
 	}
+
+	#[derive(Component)]
+	pub struct HeaderUI;
+
+	#[derive(Component)]
+	pub struct ExpUI;
+
+	#[derive(Component)]
+	pub struct ExpLevelUI;
 }
