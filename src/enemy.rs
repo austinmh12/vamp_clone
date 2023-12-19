@@ -54,7 +54,17 @@ pub fn spawn_enemies(
 				LockedAxes::ROTATION_LOCKED_Z,
 				GamePlayEntity,
 			)
-		);
+		).with_children(|parent| {
+			parent.spawn(SpriteBundle {
+				transform: Transform::from_xyz(0., -GRID_SIZE, 0.),
+				sprite: Sprite {
+					color: Color::rgb(1., 1., 0.1),
+					custom_size: Some(Vec2::new(28., 3.)),
+					..default()
+				},
+				..default()
+			});
+		});
 	}
 }
 
@@ -142,7 +152,17 @@ pub fn spawn_enemies_over_time (
 				LockedAxes::ROTATION_LOCKED_Z,
 				GamePlayEntity,
 			)
-		);
+		).with_children(|parent| {
+			parent.spawn(SpriteBundle {
+				transform: Transform::from_xyz(0., -GRID_SIZE, 0.),
+				sprite: Sprite {
+					color: Color::rgb(1., 1., 0.1),
+					custom_size: Some(Vec2::new(28., 3.)),
+					..default()
+				},
+				..default()
+			});
+		});
 	}
 }
 

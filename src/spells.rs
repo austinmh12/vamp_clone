@@ -71,7 +71,8 @@ pub fn spell_movement(
 
 pub fn spell_damage_enemy(
 	spell_query: Query<(&Collider, &GlobalTransform, &Spell)>,
-	mut enemy_query: Query<&mut Enemy>,
+	mut enemy_query: Query<(&mut Enemy, &Children)>,
+	mut hp_bar_query: Query<&mut Sprite>,
 	rapier_context: Res<RapierContext>,
 	time: Res<Time>,
 ) {
@@ -82,8 +83,13 @@ pub fn spell_damage_enemy(
 			spell_collider,
 			QueryFilter::new(),
 			|e| {
-				if let Ok(mut enemy) = enemy_query.get_mut(e) {
+				if let Ok((mut enemy, children)) = enemy_query.get_mut(e) {
 					enemy.hp -= spell.damage * time.delta_seconds();
+					for child in children {
+						if let Ok(mut hp_bar) = hp_bar_query.get_mut(*child) {
+							hp_bar.custom_size = Some(Vec2::new(28. * (enemy.hp / 10.), 3.))
+						}
+					}
 				}
 				true
 			}
