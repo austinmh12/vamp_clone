@@ -87,7 +87,8 @@ pub fn enemy_movement(
 pub fn enemy_damage_player(
 	// mut game_over_event_writer: EventWriter<GameOver>,
 	enemies_query: Query<(&Collider, &GlobalTransform, &Enemy)>,
-	mut player_query: Query<&mut Player>,
+	mut player_query: Query<(&mut Player, &Children)>,
+	mut hp_bar_query: Query<&mut Sprite>,
 	rapier_context: Res<RapierContext>,
 	time: Res<Time>,
 	// score: Res<Score>,
@@ -99,8 +100,13 @@ pub fn enemy_damage_player(
 			collider,
 			QueryFilter::new(),
 			|e| {
-				if let Ok(mut player) = player_query.get_mut(e) {
+				if let Ok((mut player, children)) = player_query.get_mut(e) {
 					player.hp -= enemy.dmg * time.delta_seconds();
+					for child in children {
+						if let Ok(mut hp_bar) = hp_bar_query.get_mut(*child) {
+							hp_bar.custom_size = Some(Vec2::new(28. * (player.hp / player.max_hp), 3.))
+						}
+					}
 				}
 				true
 			}

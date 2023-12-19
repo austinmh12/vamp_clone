@@ -44,7 +44,17 @@ pub fn spawn_player(
 			Collider::ball(GRID_SIZE / 2.),
 			GamePlayEntity,
 		)
-	);
+	).with_children(|parent| {
+		parent.spawn(SpriteBundle {
+			transform: Transform::from_xyz(0., GRID_SIZE, 0.),
+			sprite: Sprite {
+				color: Color::rgb(0.2, 1., 0.2),
+				custom_size: Some(Vec2::new(28., 3.)),
+				..default()
+			},
+			..default()
+		});
+	});
 }
 
 pub fn player_movement(
